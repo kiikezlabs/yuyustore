@@ -38,11 +38,13 @@
     </script>
 
     <div class="container">
-        <form id="item-form">
-            <input type="text" id="nombre" placeholder="Nombre de la prenda" required>
-            <input type="number" id="cantidad" placeholder="Cantidad" required>
-            <button type="submit">Agregar a Inventario</button>
-        </form>
+    <form id="item-form" enctype="multipart/form-data">
+        <input type="text" id="nombre" placeholder="Nombre de la prenda" required>
+        <input type="number" id="cantidad" placeholder="Cantidad" required>
+        <label for="imagen" class="file-upload-label">Seleccionar Imagen</label>
+        <input type="file" id="imagen" accept="image/*">
+        <button type="submit">Agregar a Inventario</button>
+    </form>
         <hr>
         <h2>Inventario Actual</h2>
         <div id="inventory-list">
