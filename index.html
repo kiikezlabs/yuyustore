@@ -1,46 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <h1>Mi Inventario de Ropa</h1>
-
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
-        import { getFirestore, collection, addDoc, onSnapshot, doc, deleteDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
-
-        const firebaseConfig = {
-            apiKey: "AIzaSyCVuW9lEwz5986S2Mzhbmh-LMiKeo5L1XU",
-            authDomain: "store-45f74.firebaseapp.com",
-            databaseURL: "https://store-45f74-default-rtdb.firebaseio.com",
-            projectId: "store-45f74",
-            storageBucket: "store-45f74.firebasestorage.app",
-            messagingSenderId: "296996281651",
-            appId: "1:296996281651:web:d64fa03b3223a2f62d3246",
-            measurementId: "G-0L2Q0V17QL"
-        };
-
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-        
-        // Exportamos las funciones de Firestore para usarlas en script.js
-        window.db = db;
-        window.collection = collection;
-        window.addDoc = addDoc;
-        window.onSnapshot = onSnapshot;
-        window.doc = doc;
-        window.deleteDoc = deleteDoc;
-    </script>
-    <div class="container">
-        <form id="item-form">
-            <input type="text" id="nombre" placeholder="Nombre de la prenda" required>
-            <input type="number" id="cantidad" placeholder="Cantidad" required>
-            <button type="submit">Agregar a Inventario</button>
-        </form>
-
-        <hr>
-
-        <h2>Inventario Actual</h2>
-        <div id="inventory-list">
+    <div class="menu-container">
+        <h1>Bienvenido al Gestor de Inventario</h1>
+        <div class="menu-buttons">
+            <a href="inventario.html" class="button button-primary">
+                <i class="fas fa-box-open"></i> Agregar Prenda
+            </a>
             </div>
     </div>
-
-    <script src="script.js" type="module"></script>
 </body>
+</html>
