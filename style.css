@@ -171,3 +171,20 @@ hr {
         align-self: flex-end;
     }
 }
+/* Estilos para el campo de subida de archivos */
+.file-upload-label {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #f1f1f1;
+    color: #333;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+
+#imagen {
+    display: none; /* Oculta el input file original */
+}
